@@ -49,7 +49,7 @@ the source code of these has been checked out to your local filesystem.
  
    ``lein hotsauce on``
    
-   (You can alway turn Hotsauce off again with ``lein hotsauce off`)
+   (You can alway turn Hotsauce off again with ``lein hotsauce off``)
    
 Leiningen will now do all its normal tasks on any project as, *fetching 
 source and resources related to project x and y from the local filesystem*.
@@ -94,7 +94,7 @@ Hotsauce is spicey, but still in beta.  Personally I consume it without fear.
 * *You name could go here*
 * *or maybe here...*
 
-Pull requests are welcome
+Pull requests are welcome.
 
 ## License
 
