@@ -31,7 +31,6 @@
 (defn list-project-status [project projects active diag]
   (when (seq projects)
     (let [ds (plugin/dep-set project)]
-      (println ds)
       (string/join "\n"
                    (cons "  Projects:"
                          (for [{:keys [hot id root name]} (sort-by :name (vals projects))]
