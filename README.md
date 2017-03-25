@@ -99,7 +99,7 @@ enough to get you going.
   
 However, here's a bit more:
   
-  * [List of sub commands](/doc/SUBCOMMANDS.md)
+  * [List of subcommands](/doc/SUBCOMMANDS.md)
   * [Tutorial - yet to be written](/doc/TUTORIAL.md)
 
 #### By the way
