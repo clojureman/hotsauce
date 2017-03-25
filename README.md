@@ -10,10 +10,10 @@
 
 For anything but toy projects, it essential to break up the code into separate libraries.
 
-In the Clojure world this works great, but there's little problem.
+In the Clojure world this works great, but there's a little problem.
 
 ### The problem
-It is a hassle to work simultaneously on a clojure project and the libraries it depends on.
+It is a hassle to work simultaneously on a Clojure project and the libraries it depends on.
 <br>
 Whenever a change is made to a source file of a library, that library has to be built, installed in a repo, and the main project has to be rebuilt. Only then can you check if the change worked or not.
 
@@ -67,7 +67,7 @@ again, and bump version numbers, check in etc. as you would do normally.
 
 ## Install
 
-I recommend making hotsauce available for all of your projects.
+I recommend making Hotsauce available for all of your projects.
 
 If you have no `~/.lein/profiles.clj` file, you could just create one 
 and give it this content:
