@@ -17,7 +17,7 @@ It is a hassle to work simultaneously on a Clojure project and the libraries it 
 <br>
 Whenever a change is made to a source file of a library, that library has to be built, installed in a repo, and the main project has to be rebuilt. Only then can you run your code and check if the change worked or not.
 
-Worse yet, you might have libraries in you application that depends on the library you changed, so you need to rebuild those as well before rebuilding the application.
+Worse yet, you might have libraries in you application that depend on the library you changed, so you need to rebuild those as well before rebuilding the application.
 
 *This goes counter to the try-it-out-now culture so central to the cult of the REPL.*
 
