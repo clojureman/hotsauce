@@ -55,7 +55,7 @@ the source code of these has been checked out to your local filesystem.
  
    ``lein hotsauce on``
    
-   (You can alway turn Hotsauce off again with ``lein hotsauce off``)
+   (You can always turn Hotsauce off again with ``lein hotsauce off``)
    
 Leiningen will now do all its normal tasks on any project as, *fetching 
 source and resources related to project x and y from the local filesystem*.
