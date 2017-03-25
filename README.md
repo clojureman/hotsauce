@@ -15,7 +15,7 @@ In the Clojure world this works great, but there's a little problem.
 ### The problem
 It is a hassle to work simultaneously on a Clojure project and the libraries it depends on.
 <br>
-Whenever a change is made to a source file of a library, that library has to be built, installed in a repo, and the main project has to be rebuilt. Only then can you check if the change worked or not.
+Whenever a change is made to a source file of a library, that library has to be built, installed in a repo, and the main project has to be rebuilt. Only then can you run your code and check if the change worked or not.
 
 Worse yet, you might have libraries in you application that depends on the library you changed, so you need to rebuild those as well before rebuilding the application.
 
