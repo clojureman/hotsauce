@@ -60,7 +60,7 @@
                                        "  There are no projects under hotsauce control. \n  To add a project, use the command\n    lein hotsauce add <project-dir>\n  or\n    lein hotsauce add-recursive\n"))
                 "\n\n"))
          (when footer
-           "For more information type\n  lein hotsauce help\nor go to\n  www.github.com/clojureman/hotsauce\n"))))
+           "For more information type\n  lein help hotsauce\nor go to\n  www.github.com/clojureman/hotsauce\n"))))
 
 (defn set-prj-prop!
   [project-name k v]
