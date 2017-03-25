@@ -1,6 +1,5 @@
-*Finally, say hello to*
 # Hotsauce
-*and goodbye to checkouts*
+*- say goodbye to checkouts*
 
 > * Hot load source code and resources from libraries *(including transitive dependencies).*
 > * No changes to your projects or project.clj
@@ -13,18 +12,25 @@ For anything but toy projects, it essential to break up the code into separate l
 In the Clojure world this works great, but there's a little problem.
 
 ### The problem
-It is a hassle to work simultaneously on a Clojure project and the libraries it depends on.
+It is a hassle to work simultaneously on a Clojure project and the libraries
+it depends on.
 <br>
-Whenever a change is made to a source file of a library, that library has to be built, installed in a repo, and the main project has to be rebuilt. Only then can you run your code and check if the change worked or not.
+Whenever a change is made to a source file of a library, that library has to be built, 
+installed in a repo, and the main project has to be rebuilt. Only then can 
+you run your code and check if the change worked or not.
 
-Worse yet, you might have libraries in you application that depend on the library you changed, so you need to rebuild those as well before rebuilding the application.
+Worse yet, you might have libraries in you application that depend on the library you 
+changed, so you need to rebuild those as well before rebuilding the application.
 
 *This goes counter to the try-it-out-now culture so central to the cult of the REPL.*
 
-It is no wonder that some people opt to [cowboy code](https://en.wikipedia.org/wiki/Cowboy_coding), refraining from properly partitioning their code into separately versioned libraries.
+It is no wonder that some people opt to 
+[cowboy code](https://en.wikipedia.org/wiki/Cowboy_coding), 
+refraining from properly partitioning their code into separately versioned libraries.
 
 ### Checkouts
-Leiningen acknowledges the problem and offers a partial solution called checkouts. It works well, but [it can be bothersome and error-prone](/CHECKOUTS.md).
+Leiningen acknowledges the problem and offers a partial solution called checkouts.
+It works well, but [it can be bothersome and error-prone](/doc/CHECKOUTS.md).
 
 ### The solution
 
@@ -87,7 +93,16 @@ Using Hotsauce can be an individual decision that impacts nobody else.
   so it will be automatically available for everybody.
   <br>Just add `[hotsauce "0.1.5"]` to the `:plugins` vector inside ``defproject`` in ``project.clj``
 
-## By the way
+## Want to know more?
+Actually, what you have read so far on this page should be 
+enough to get you going.
+  
+However, here's a bit more:
+  
+  * [List of sub commands](/doc/SUBCOMMANDS.md)
+  * [Tutorial - yet to be written](/doc/TUTORIAL.md)
+
+#### By the way
 Hotsauce is spicey, but still in beta.  Personally I consume it without fear.
 
 ## Contributors
