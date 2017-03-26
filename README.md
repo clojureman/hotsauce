@@ -102,15 +102,25 @@ However, here's a bit more:
   * [List of subcommands](/doc/SUBCOMMANDS.md)
   * [Tutorial - yet to be written](/doc/TUTORIAL.md)
 
-## ClojureScript must wait
+## Project status
 Hotsauce is spicey, but still in beta.
-I'm pondering how to best support figwheel/cljsbuild, so for now you'd better stick to using it for Clojure
+<br>I would expect some issues could arise with profiles and with ClojureScript.
+
+In my experience, when I use figwheel for web development, I often have to hard 
+reload a ClojureScript application in Chrome after I change Hotsauce on/off 
+or dependencies hot/cold.
+ 
+This seems to be a problem with figwheel, as the js-code is being correctly generated. 
 
 ## Contributors
 * *You name could go here*
 * *or maybe here...*
 
 Pull requests are welcome.
+
+Thanks to [Thomas Engelschmidt](https://github.com/zamaterian) for a good conversation about various development pain points, build tooling and the JVM CLASSPATH. Ultimately that led me to reshape some tooling ideas I had and to put together with this simple plugin.
+
+Thanks to [Mikkel Gravgaard](https://github.com/grav) for early comments.
 
 ## License
 

@@ -14,7 +14,6 @@ cold          |  Exempt one ore more projects from hot-saucing
 on            |  Makes hotsauce active
 off           |  Makes hotsauce active
 show          |  Show the effective project settings as lein sees them.<br>*- Use mostly if you are interested in lein internals*
------------|------------
 
 If you just type 
 
