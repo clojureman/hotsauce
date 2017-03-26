@@ -75,9 +75,14 @@
       (when (:root x) x))
     (catch Throwable _)))
 
+(defn normalize-proj-id [group nam]
+  (if (re-matches #".*\/.*" (str nam))
+    (str nam)
+    (str (if (seq group) group nam) "/" nam)))
+
 (defn add-proj [{:keys [root group] nam :name}]
   (if (and root nam)
-    (plugin/update-config :projects #(let [id (if (seq group) (str group "/" nam) (str nam))]
+    (plugin/update-config :projects #(let [id (normalize-proj-id group nam)]
                                       (update-in % [id] assoc :name nam :id id :root root)))
     (condition :invalid-project [group nam root])))
 
@@ -119,8 +124,8 @@
 
 (defn remove
   "Remove a project from the project list"
-  [nam]
-  (plugin/update-config :projects dissoc nam)
+  [id]
+  (plugin/update-config :projects dissoc id)
   (show-status :projects :empty-projects))
 
 (defn on
@@ -183,7 +188,7 @@
         "off" (off project)
         "add" (add project args)
         "add-recursive" (add-recursive)
-        "remove" (remove (first args))
+        "remove" (remove (normalize-proj-id nil (first args)))
         "remove-all" (remove-all)
         "hot" (hot project args)
         "cold" (cold project args)
