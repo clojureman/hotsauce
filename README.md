@@ -60,7 +60,7 @@ the source code of these has been checked out to your local filesystem.
 Leiningen will now do all its normal tasks on any project as, *fetching 
 source and resources related to project x and y from the local filesystem*.
 
-Suddenly the local source it hot!
+Suddenly the local source is hot!
 
 Start the main projects with your favourite IDE or just lein repl, 
 and you can edit and reload source files from x and y to your 
