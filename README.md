@@ -62,7 +62,7 @@ source and resources related to project x and y from the local filesystem*.
 
 Suddenly the local source is hot!
 
-Start the main projects with your favourite IDE or just ``lein repl, 
+Start the main projects with your favourite IDE or just ``lein repl``, 
 and you can edit and reload source files from x and y to your 
 heart's content. You don't even have to worry if the version 
 numbers correspond to what the main projects declare.
