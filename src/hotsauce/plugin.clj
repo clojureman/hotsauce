@@ -77,12 +77,47 @@
             (condition :original nil :normally nil))
       project
       (let [hot-proj-files (map #(let [{:keys [projects active]} (get-config)]
-                                  (when active (.getAbsolutePath (io/file (get-in projects [% :root]) "project.clj"))))
+                                   (when active (.getAbsolutePath (io/file (get-in projects [% :root]) "project.clj"))))
                                 @hot-deps)
             px (map (manage project/read :original true) hot-proj-files)
-            upd (fn [p k] (update p k #(concat (apply concat (map k px)) %)))]
+            upd (fn [p k] (update p k #(concat (apply concat (map k px)) %)))
+            builds-ks [:cljsbuild :builds]
+            upd-build (fn [x]
+                        (update x
+                                :source-paths
+                                (fn [paths]
+                                  (concat (apply concat (map :source-paths px))
+                                          paths))))
+            upd-cljs-builds (fn [x]
+                              (into (empty x)
+                                    (map (if (map? x)
+                                           (fn [[k v]] [k (upd-build v)])
+                                           upd-build)
+                                         x)))
+            #_(fn [proj]
+                (let [ks
+                      upd-build identity #_(fn [build] (assoc build :====================> (map :source-paths px)) #_(update build
+                                                                                                                     :source-paths
+                                                                                                                     (fn [paths]
+                                                                                                                       (concat (apply
+                                                                                                                                 concat
+                                                                                                                                 (apply concat (map :source-paths px)))
+                                                                                                                               paths))))
+                      x (get-in proj ks)]
+                  (if x
+                    (assoc-in proj ks
+                              (into (empty x)
+                                    (map (if (map? x)
+                                           #_(fn [[k v]] [k (upd-build v)])
+                                           #(vector :=========================> )
+                                           upd-build)
+                                         proj)))
+                    proj)))
+            ]
         (-> project
-             (upd :source-paths)
-             (upd :resource-paths)
-             (upd :test-paths)
-             )))))
+            (upd :source-paths)
+            (upd :resource-paths)
+            (upd :test-paths)
+            (#(if (get-in % builds-ks)
+                (update-in % builds-ks upd-cljs-builds)
+                %)))))))
