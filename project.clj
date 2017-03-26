@@ -1,4 +1,4 @@
-(defproject hotsauce "0.1.5"
+(defproject hotsauce "0.1.6-SNAPSHOT"
   :description "Hotsauce"
   :url "https://github.com/clojureman/hotsauce"
   :license {:name "Eclipse Public License"
