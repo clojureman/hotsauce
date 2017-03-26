@@ -79,11 +79,11 @@ If you have no `~/.lein/profiles.clj` file, you could just create one
 and give it this content:
 
 ```clojure
-{:user {:plugins [[hotsauce "0.1.5"]] }}
+{:user {:plugins [[hotsauce "0.1.6-SNAPSHOT"]] }}
 ```
 
 > If you already have a ~/.lein/profiles.clj file, you will
-  <br>need to add `[hotsauce "0.1.5"]` to the `:plugins` vector.
+  <br>need to add `[hotsauce "0.1.6-SNAPSHOT"]` to the `:plugins` vector.
 
 ## Good news if you work in a team
 Using Hotsauce can be an individual decision that impacts nobody else. 
