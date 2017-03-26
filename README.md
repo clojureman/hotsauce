@@ -102,8 +102,9 @@ However, here's a bit more:
   * [List of subcommands](/doc/SUBCOMMANDS.md)
   * [Tutorial - yet to be written](/doc/TUTORIAL.md)
 
-#### By the way
-Hotsauce is spicey, but still in beta.  Personally I consume it without fear.
+## ClojureScript must wait
+Hotsauce is spicey, but still in beta.
+I'm pondering how to best support figwheel/cljsbuild, so for now you'd better stick to using it for Clojure
 
 ## Contributors
 * *You name could go here*
