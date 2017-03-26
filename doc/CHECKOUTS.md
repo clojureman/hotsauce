@@ -12,7 +12,7 @@ Hotsauce *as a matter of principle* does not change anything in
 the projects or the project files.
 
 Instead it keeps a list of hot (or cold) projects in ``~/.hotsauce``, 
-which it maintains through ``lein hotsauce`` [subcommands](/doc/SUBSOMMANDS).
+which it maintains through ``lein hotsauce`` [subcommands](/doc/SUBCOMMANDS).
 
 Depending on the actual direct and indirect dependencies of the current 
 lein project, Hotsauce will modify the CLASSPATH according to which 
