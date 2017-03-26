@@ -80,8 +80,9 @@
                                   (when active (.getAbsolutePath (io/file (get-in projects [% :root]) "project.clj"))))
                                 @hot-deps)
             px (map (manage project/read :original true) hot-proj-files)
-            upd (fn [k] (fn [p] (update p k #(concat (apply concat (map k px)) %))))]
-        ((comp (upd :source-paths)
-               (upd :resource-paths)
-               (upd :test-paths))
-          project)))))
+            upd (fn [p k] (update p k #(concat (apply concat (map k px)) %)))]
+        (-> project
+             (upd :source-paths)
+             (upd :resource-paths)
+             (upd :test-paths)
+             )))))
