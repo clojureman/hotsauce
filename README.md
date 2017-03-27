@@ -91,7 +91,7 @@ Using Hotsauce can be an individual decision that impacts nobody else.
 > But if you want to make life extra easy for team members, you might 
   want to include the Hotsauce plugin in the project.clj of your main projects, 
   so it will be automatically available for everybody.
-  <br>Just add `[hotsauce "0.1.5"]` to the `:plugins` vector inside ``defproject`` in ``project.clj``
+  <br>Just add `[hotsauce "0.1.6-SNAPSHOT"]` to the `:plugins` vector inside ``defproject`` in ``project.clj``
 
 ## Want to know more?
 Actually, what you have read so far on this page should be 
