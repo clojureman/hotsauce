@@ -1,4 +1,4 @@
-# Hotsauce
+# Hotsauce *(BETA)*
 *- say goodbye to checkouts*
 
 > * Hot load source code and resources from libraries *(including transitive dependencies).*
